@@ -25,10 +25,10 @@ jobs:
           push: true
           tags: priscila454/practica_servece:latest
 
-      - name: Instalar Railway CLI
-        run: npm install -g railway
+      - name: Instalar Railway CLI actualizado
+        run: npm install -g @railway/cli
 
       - name: Desplegar en Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway up --service practica_service1
+        run: railway run up --service practica_service1
