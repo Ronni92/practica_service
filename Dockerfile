@@ -1,8 +1,9 @@
-# Imagen base con nginx
 FROM nginx:alpine
 
-# Copia archivos estáticos a la carpeta de nginx
+# Copia configuración personalizada de nginx
+COPY nginx.conf /etc/nginx/nginx.conf
+
+# Copia archivos estáticos
 COPY . /usr/share/nginx/html
 
-# Exponer puerto 80
 EXPOSE 80
