@@ -31,4 +31,4 @@ jobs:
       - name: Desplegar en Railway
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
-        run: railway run up --service practica_service1
+        run: railway run up --service practica_servece
