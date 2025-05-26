@@ -27,4 +27,8 @@ jobs:
 
       - name: Instalar Railway CLI actualizado
         run: npm install -g @railway/cli
+      - name: Desplegar en Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway up --service practica_service
 
